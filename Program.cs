@@ -52,36 +52,41 @@ namespace linq
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-            // // Order these student names alphabetically, in descending order (Z to A)
-            // List<string> names = new List<string>()
-            // {
-            //     "Heather",
-            //     "James",
-            //     "Xavier",
-            //     "Michelle",
-            //     "Brian",
-            //     "Nina",
-            //     "Kathleen",
-            //     "Sophia",
-            //     "Amir",
-            //     "Douglas",
-            //     "Zarley",
-            //     "Beatrice",
-            //     "Theodora",
-            //     "William",
-            //     "Svetlana",
-            //     "Charisse",
-            //     "Yolanda",
-            //     "Gregorio",
-            //     "Jean-Paul",
-            //     "Evangelina",
-            //     "Viktor",
-            //     "Jacqueline",
-            //     "Francisco",
-            //     "Tre"
-            // };
+            // Order these student names alphabetically, in descending order (Z to A)
+            List<string> names = new List<string>()
+            {
+                "Heather",
+                "James",
+                "Xavier",
+                "Michelle",
+                "Brian",
+                "Nina",
+                "Kathleen",
+                "Sophia",
+                "Amir",
+                "Douglas",
+                "Zarley",
+                "Beatrice",
+                "Theodora",
+                "William",
+                "Svetlana",
+                "Charisse",
+                "Yolanda",
+                "Gregorio",
+                "Jean-Paul",
+                "Evangelina",
+                "Viktor",
+                "Jacqueline",
+                "Francisco",
+                "Tre"
+            };
 
-            // List<string> descend = ...
+            List<string> descend = names.OrderByDescending(p => p).ToList();
+            Console.WriteLine("----Practice 3----");
+            foreach (string name in descend)
+            {
+                Console.WriteLine($"{name}");
+            }
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -173,7 +178,39 @@ namespace linq
                 21.76
             };
 
-            double mostExpensive = prices.
+            double mostExpensive = prices.Max();
+            Console.WriteLine("----Practice 7----");
+            Console.WriteLine($"{mostExpensive}");
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            List<int> wheresSquaredo = new List<int>()
+            {
+                66,
+                12,
+                8,
+                27,
+                82,
+                34,
+                7,
+                50,
+                19,
+                46,
+                81,
+                23,
+                30,
+                4,
+                68,
+                14
+            };
+            /*
+                Store each number in the following List until a perfect square
+                is detected.
+
+                Expected output is { 66, 12, 8, 27, 82, 34, 7, 50, 19, 46 } 
+
+                Ref: https://msdn.microsoft.com/en-us/library/system.math.sqrt(v=vs.110).aspx
+            */
         }
     }
 }
